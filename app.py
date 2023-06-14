@@ -51,7 +51,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 
     else:
         pred=0.30
-        #st.markdown('Наверное, клиент останется в банке, но это не точно да и вообще надо звонить в Битву экстрасенсов.')
+        #st.markdown('Есть вероятность, что клиент останется в банке.')
 
     return float(pred)
 
@@ -102,7 +102,7 @@ def main():
             """
     no_churn_html = """  
               <div style="background-color:#94be8d;padding:20px >
-               <h2 style="color:green ;text-align:center;"> Ура, клиент остаётся в банке !!!</h2>
+               <h2 style="color:green ;text-align:center;"> Клиент остаётся в банке!</h2>
                </div>
             """
 
