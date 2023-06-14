@@ -128,7 +128,7 @@ def main():
     }
     </style>""", unsafe_allow_html=True)
 
-    b = st.button("Сделать прогноз")
+    #b = st.button("Сделать прогноз")
     
     
     
