@@ -102,6 +102,14 @@ def main():
     if st.sidebar.button ('Сделать прогноз', key = "1"):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
+        if output >= 0.5:
+            st.markdown(churn_html, unsafe_allow_html= True)
+
+        else:
+            st.markdown(no_churn_html, unsafe_allow_html= True)  
+        
+        
+        
      
     
     
