@@ -98,6 +98,22 @@ def main():
     IsActiveMember = st.sidebar.selectbox("Активный клиент", ['0', '1'])
 
     EstimatedSalary = st.sidebar.slider("Зарплата", 0.00, 200000.00)
+    churn_html = """  
+              <div style="background-color:#fae319;padding:20px >
+               <h2 style="color:red;text-align:center;"> Жаль, но теряем клиента.</h2>
+               </div>
+            """
+    no_churn_html = """  
+              <div style="background-color:#bed0d4;padding:20px >
+               <h2 style="color:green ;text-align:center;"> Клиент остаётся в банке!</h2>
+               </div>
+            """  
+    
+    
+    
+    
+    
+    
     
     if st.sidebar.button ('Сделать прогноз', key = "1"):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
@@ -113,16 +129,7 @@ def main():
      
     
     
-    churn_html = """  
-              <div style="background-color:#fae319;padding:20px >
-               <h2 style="color:red;text-align:center;"> Жаль, но теряем клиента.</h2>
-               </div>
-            """
-    no_churn_html = """  
-              <div style="background-color:#bed0d4;padding:20px >
-               <h2 style="color:green ;text-align:center;"> Клиент остаётся в банке!</h2>
-               </div>
-            """
+    
     if Balance < 10000 and EstimatedSalary < 5000 and IsActiveMember == 0 and NumOfProducts == 1:
             st.success('Вероятность оттока составляет более 90%.')
             st.markdown(churn_html, unsafe_allow_html= True)
