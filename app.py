@@ -119,7 +119,7 @@ def main():
     m = st.markdown("""
     <style>
     div.stButton > button:first-child {
-    background-color: #0099ff;
+    background-color: #f73b67;
     color:#ffffff;
     }
     div.stButton > button:hover {
