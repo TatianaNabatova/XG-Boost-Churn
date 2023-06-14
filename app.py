@@ -98,7 +98,13 @@ def main():
     IsActiveMember = st.sidebar.selectbox("Активный клиент", ['0', '1'])
 
     EstimatedSalary = st.sidebar.slider("Зарплата", 0.00, 200000.00)
-
+    
+    if st.button('Сделать прогноз'):
+        output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
+        st.success('Вероятность оттока составляет {}'.format(output))
+     
+    
+    
     churn_html = """  
               <div style="background-color:#fae319;padding:20px >
                <h2 style="color:red;text-align:center;"> Жаль, но теряем клиента.</h2>
