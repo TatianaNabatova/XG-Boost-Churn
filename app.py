@@ -69,8 +69,8 @@ def main():
 
 
 
-    st.sidebar.subheader("Приложение создано для курса Diving into Darkness of Data Science")
-    st.sidebar.text("Разработчик - Братковский Е.В.")
+    st.sidebar.subheader("Модель прогнозирования оттока клиентов в рамках курса Diving into Darkness of Data Science")
+    st.sidebar.text("Разработчик - Татьяна Набатова")
 
 
     CreditScore = st.slider('Скоринговый балл', 300, 900)
