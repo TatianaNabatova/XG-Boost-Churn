@@ -105,16 +105,16 @@ def main():
                <h2 style="color:green ;text-align:center;"> Клиент остаётся в банке!</h2>
                </div>
             """
-   if Balance < 1000 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 1:
+    if Balance < 1000 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 1:
             st.success('Вероятность оттока составляет более 90%.')
             st.markdown(churn_html, unsafe_allow_html= True)
-   if Salary < 100:
+    if Salary < 100:
         EstimatedSalary = 100
-   elif Salary >= 100 and Salary < 6000:
+    elif Salary >= 100 and Salary < 6000:
         EstimatedSalary = Salary
-   else:
+    else:
         EstimatedSalary = 6000
-   if st.button('Сделать прогноз'):
+    if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
       
