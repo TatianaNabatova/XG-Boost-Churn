@@ -70,9 +70,9 @@ def main():
 
 
     st.sidebar.subheader("Модель прогнозирования оттока клиентов в рамках курса Diving into Darkness of Data Science")
-    st.sidebar.info ("Разработчик - Татьяна Набатова")
+    
     st.sidebar.image ('2.png',width = 300)
-
+    st.sidebar.info ("Разработчик - Татьяна Набатова")
     CreditScore = st.slider('Скоринговый балл', 300, 900)
 
     Geography = st.selectbox('География/регион', ['France', 'Germany', 'Spain'])
