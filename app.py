@@ -93,7 +93,7 @@ def main():
 
     IsActiveMember = st.selectbox("Активный клиент", ['0', '1'])
 
-    EstimatedSalary = st.slider("Зарплата", 0.00, 200000.00)
+    EstimatedSalary = st.sidebar.slider("Зарплата", 0.00, 200000.00)
 
     churn_html = """  
               <div style="background-color:#fae319;padding:20px >
