@@ -123,8 +123,8 @@ def main():
     color:#ffffff;
     }
     div.stButton > button:hover {
-    background-color: #00ff00;
-    color:#ff0000;
+    background-color: #fa7f9c;
+    color:#ffffff;
     }
     </style>""", unsafe_allow_html=True)
 
