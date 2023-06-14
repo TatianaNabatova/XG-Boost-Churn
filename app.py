@@ -99,7 +99,7 @@ def main():
 
     EstimatedSalary = st.sidebar.slider("Зарплата", 0.00, 200000.00)
     
-    if st.button('Сделать прогноз'):
+    #if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
      
