@@ -75,7 +75,7 @@ def main():
     st.sidebar.info ("Разработчик - Татьяна Набатова")
     CreditScore = st.slider('Скоринговый балл', 0, 900)
 
-    Geography = st.selectbox('Страна', ['Франция', 'Германия', 'Испания'])
+    Geography = st.selectbox('Страна', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
 
     Gender = st.selectbox('Пол', ['Мужской', 'Женский'])
