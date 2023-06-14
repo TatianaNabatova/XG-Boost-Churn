@@ -108,10 +108,10 @@ def main():
     if Balance < 1000 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 1:
             st.success('Вероятность оттока составляет более 90%.')
             st.markdown(churn_html, unsafe_allow_html= True)
-    if Salary < 100:
+    if EstimatedSalary < 100:
         EstimatedSalary = 100
-    elif Salary >= 100 and Salary < 6000:
-        EstimatedSalary = Salary
+    elif EstimatedSalary >= 100 and EstimatedSalary < 6000:
+        EstimatedSalary = EstimatedSalary
     else:
         EstimatedSalary = 6000
     if st.button('Сделать прогноз'):
