@@ -89,9 +89,9 @@ def main():
 
     NumOfProducts = st.selectbox('Количество продуктов', ['1', '2', '3', '4'])
 
-    HasCrCard = st.selectbox("Наличие кредитной карты", ['Да', 'Нет'])
+    HasCrCard = st.selectbox("Наличие кредитной карты", ['0', '1'])
 
-    IsActiveMember = st.selectbox("Активный клиент", ['Нет', 'Да'])
+    IsActiveMember = st.selectbox("Активный клиент", ['0', '1'])
 
     EstimatedSalary = st.slider("Зарплата", 0.00, 200000.00)
 
