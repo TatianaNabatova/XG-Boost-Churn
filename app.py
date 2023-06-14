@@ -75,10 +75,10 @@ def main():
     st.sidebar.info ("Разработчик - Татьяна Набатова")
     CreditScore = st.slider('Скоринговый балл', 0, 900)
 
-    Geography = st.selectbox('Страна', ['France', 'Germany', 'Spain'])
+    Geography = st.selectbox('Страна', ['Франция', 'Германия', 'Испания'])
     Geo = int(le1_pik.transform([Geography]))
 
-    Gender = st.selectbox('Пол', ['Male', 'Female'])
+    Gender = st.selectbox('Пол', ['Мужской', 'Женский'])
     Gen = int(le_pik.transform([Gender]))
 
     Age = st.slider("Возраст", 18, 95)
@@ -91,7 +91,7 @@ def main():
 
     HasCrCard = st.selectbox("Наличие кредитной карты", ['Да', 'Нет'])
 
-    IsActiveMember = st.selectbox("Активный клиент", ['0', '1'])
+    IsActiveMember = st.selectbox("Активный клиент", ['Нет', 'Да'])
 
     EstimatedSalary = st.slider("Зарплата", 0.00, 200000.00)
 
