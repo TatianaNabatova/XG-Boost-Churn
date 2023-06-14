@@ -78,7 +78,7 @@ def main():
     Geography = st.selectbox('Страна', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
 
-    Gender = st.selectbox('Пол', ['Мужской', 'Женский'])
+    Gender = st.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
     Age = st.slider("Возраст", 18, 95)
