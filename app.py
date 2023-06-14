@@ -75,27 +75,27 @@ def main():
 
     st.sidebar.subheader("Модель прогнозирования оттока клиентов в рамках курса Diving into Darkness of Data Science")
     
-    st.sidebar.image ('4.png',width = 300)
+    #st.sidebar.image ('4.png',width = 300)
     st.sidebar.info ("Разработчик - Татьяна Набатова")
-    CreditScore = st.slider('Скоринговый балл', 0, 900)
+    CreditScore = st.sidebar.slider('Скоринговый балл', 0, 900)
 
-    Geography = st.selectbox('Страна', ['France', 'Germany', 'Spain'])
+    Geography = st.sidebar.selectbox('Страна', ['France', 'Germany', 'Spain'])
     Geo = int(le1_pik.transform([Geography]))
 
-    Gender = st.selectbox('Пол', ['Male', 'Female'])
+    Gender = st.sidebar.selectbox('Пол', ['Male', 'Female'])
     Gen = int(le_pik.transform([Gender]))
 
-    Age = st.slider("Возраст", 18, 95)
+    Age = st.sidebar.slider("Возраст", 18, 95)
 
-    Tenure = st.selectbox("Срок обслуживания в банке", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10', '11', '12', '13', '14', '15'])
+    Tenure = st.sidebar.selectbox("Срок обслуживания в банке", ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10', '11', '12', '13', '14', '15'])
 
-    Balance = st.slider("Баланс счета", 0.00, 250000.00)
+    Balance = st.sidebar.slider("Баланс счета", 0.00, 250000.00)
 
-    NumOfProducts = st.selectbox('Количество продуктов', ['1', '2', '3', '4'])
+    NumOfProducts = st.sidebar.selectbox('Количество продуктов', ['1', '2', '3', '4'])
 
-    HasCrCard = st.selectbox("Наличие кредитной карты", ['0', '1'])
+    HasCrCard = st.sidebar.selectbox("Наличие кредитной карты", ['0', '1'])
 
-    IsActiveMember = st.selectbox("Активный клиент", ['0', '1'])
+    IsActiveMember = st.sidebar.selectbox("Активный клиент", ['0', '1'])
 
     EstimatedSalary = st.sidebar.slider("Зарплата", 0.00, 200000.00)
 
@@ -116,7 +116,7 @@ def main():
             st.success('Вероятность оттока составляет менее 30%.')
             st.markdown(churn_html, unsafe_allow_html= True)        
     
-    if st.sidebar.button('Сделать прогноз'):
+    if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
       
