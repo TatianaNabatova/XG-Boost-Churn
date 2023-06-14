@@ -116,7 +116,7 @@ def main():
             st.success('Вероятность оттока составляет менее 30%.')
             st.markdown(churn_html, unsafe_allow_html= True)        
     
-    if st.button('Сделать прогноз'):
+    if st.button(:red ['Сделать прогноз']):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
       
