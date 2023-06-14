@@ -109,7 +109,7 @@ def main():
     if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
-        st.balloons()
+      
         
 
         if output >= 0.5:
@@ -117,6 +117,6 @@ def main():
 
         else:
             st.markdown(no_churn_html, unsafe_allow_html= True)
-
+            st.balloons()
 if __name__=='__main__':
     main()
