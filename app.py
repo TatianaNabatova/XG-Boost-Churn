@@ -59,7 +59,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 def main():
   
     html_temp = """
-    <div style="background-color: yellow ;padding:10px">
+    <div style="background-color: white ;padding:10px">
     <h2 style="color: gray;text-align:center;">Прогноз оттока клиентов</h2>
     </div>
     """
@@ -96,12 +96,12 @@ def main():
     EstimatedSalary = st.slider("Зарплата", 0.00, 200000.00)
 
     churn_html = """  
-              <div style="background-color:#f44336;padding:20px >
+              <div style="background-color:#fae319;padding:20px >
                <h2 style="color:red;text-align:center;"> Жаль, но теряем клиента.</h2>
                </div>
             """
     no_churn_html = """  
-              <div style="background-color:#94be8d;padding:20px >
+              <div style="background-color:#bed0d4;padding:20px >
                <h2 style="color:green ;text-align:center;"> Клиент остаётся в банке!</h2>
                </div>
             """
