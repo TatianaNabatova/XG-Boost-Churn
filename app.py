@@ -123,7 +123,7 @@ def main():
 
         else:
             st.markdown(no_churn_html, unsafe_allow_html= True)  
-        
+            st.balloons()
         
         
      
