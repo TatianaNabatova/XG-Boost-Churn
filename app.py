@@ -70,7 +70,7 @@ def main():
 
 
     st.sidebar.subheader("Модель прогнозирования оттока клиентов в рамках курса Diving into Darkness of Data Science")
-    st.sidebar.text("Разработчик - Татьяна Набатова")
+    st.sidebar.info ("Разработчик - Татьяна Набатова")
 
 
     CreditScore = st.slider('Скоринговый балл', 300, 900)
