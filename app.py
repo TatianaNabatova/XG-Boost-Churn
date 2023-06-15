@@ -115,7 +115,7 @@ def main():
     
     
     
-    if int(Age)- int(Tenure)< 17:
+    if int(Age)- int(Tenure)< 18:
             st.error('Ошибка !')
     else:
         if st.sidebar.button ('Сделать прогноз', key = "1"):
@@ -159,7 +159,7 @@ def main():
     #b = st.button("Сделать прогноз")
     
     
-    if int(Age)- int(Tenure)< 17:
+    if int(Age)- int(Tenure)< 18:
             st.error('Некорректный ввод данных по возрасту клиента и/или длительности обслуживания в банке')
     else:
         if st.button ('Сделать прогноз', key = "2"):
