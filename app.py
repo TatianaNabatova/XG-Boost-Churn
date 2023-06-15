@@ -31,7 +31,7 @@ set_png_as_page_bg('3.jpg')
 
 
 classifier_name=['XGBoost']
-#option = st.sidebar.selectbox('Алгоритм прогнозирования оттока клиентов', classifier_name)
+option = st.sidebar.selectbox('Алгоритм прогнозирования оттока клиентов', classifier_name)
 #st.subheader(option)
 
 
